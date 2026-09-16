@@ -26,7 +26,6 @@ areas:
     items:
       - id: vla-milestones
         problem: >-
-          The field's consensus milestones remain collectively unmet: multimodality,
           reasoning, data, evaluation, cross-robot action generalization, efficiency,
           whole-body coordination, safety, agents, and coordination with humans.
         status: open

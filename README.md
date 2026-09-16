@@ -4,7 +4,6 @@
 
 *Live CLI demo: the matrix validator and stats.*
 
-
 **A sourced, machine-checkable matrix of what is solved, partially solved, and open in embodied AI and robotics software, 2025 to September 2026.**
 
 The 2025-2026 surveys and position papers keep restating the same open problems in prose. This repo turns that prose into structured, validated data: one row per problem, each with a status, an evidence level, a source, and a note. It renders to Markdown, JSON and a self-contained HTML page, and a CI check fails if a row cites a source that does not exist or claims a status it should not.
@@ -73,10 +72,6 @@ Add an entry to `data/matrix.yaml` under the right area, cite a source id that e
 ## The matrix
 
 The full rendered matrix is in [`MATRIX.md`](MATRIX.md), regenerated from the data by `opmatrix render`.
-
-## Origin
-
-Compiled alongside a set of engineering toolkits extracted from an MSc project, "Multimodal control of a wearable dual-arm robotic system for assisted object manipulation" (Imperial College London, 2026): <https://github.com/megazron/Multimodal-control-of-a-wearable-dual-arm-robotic-system-for-assisted-object-manipulation>. The discipline of "a claim about the world is a fact with a date, verify it before you build on it" comes straight from that project.
 
 ## License
 

@@ -4,12 +4,10 @@ _20 problems across 6 areas, window 2025-01 to 2026-09, compiled 2026-09-16._
 
 **15 open · 5 partial · 0 solved.** Status is the field's, not this repo's.
 
-
 ## Learning-based control and VLAs
 
 | Problem | Status | Evidence | Source |
 |---|---|---|---|
-| The field's consensus milestones remain collectively unmet: multimodality, reasoning, data, evaluation, cross-robot action generalization, efficiency, whole-body coordination, safety, agents, and coordination with humans. | 🔴 open | consensus | "10 Open Challenges" position paper (2026) |
 | Semantic-vs-embodied gap: VLA systems often understand the instruction but fail to execute the task, because they inherit LLM/VLM priors with no physical-interaction experience. | 🔴 open | reported | VLA semantic-vs-embodied gap paper (2026) |
 | Capability/robustness trade-off: an information-theoretic bound argues you cannot get both for free. | 🔴 open | reported | Capability/robustness trade-off (information-theoretic bound) (2026) |
 | Discrete action tokenization itself limits VLA scaling. | 🔴 open | reported | Discrete action tokenization limits VLA scaling (2026) |

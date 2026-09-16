@@ -5,8 +5,6 @@ These are recorded **as relayed** in the brief that seeded this matrix, at the g
 ### `aaai2026-10-challenges`
 **"10 Open Challenges" position paper** — AAAI, 2026, position paper
 
-> Lists the field's consensus milestones: multimodality, reasoning, data, evaluation, cross-robot action generalization, efficiency, whole-body coordination, safety, agents, coordination with humans.
-
 *Verify:* Confirm exact title, authors, and the ten-item list wording.
 
 ### `vla-embodiment-2026`

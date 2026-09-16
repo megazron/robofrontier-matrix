@@ -13,7 +13,6 @@ sources:
     year: 2026
     kind: position paper
     claim: >-
-      Lists the field's consensus milestones: multimodality, reasoning, data,
       evaluation, cross-robot action generalization, efficiency, whole-body
       coordination, safety, agents, coordination with humans.
     verify: Confirm exact title, authors, and the ten-item list wording.
