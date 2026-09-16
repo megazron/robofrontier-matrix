@@ -1,0 +1,130 @@
+# Sources, recorded AS RELAYED in the seeding brief. These are intentionally
+# kept at the granularity given (venue/year/kind) rather than invented as
+# precise citation strings with authors and identifiers I cannot verify.
+#
+# Each entry: a human label, the kind of work, the year/window, and a
+# `verify` note on what to confirm against the real bibliography before quoting.
+# `url` is left blank where no verified link is available; do not fabricate one.
+
+sources:
+  aaai2026-10-challenges:
+    label: '"10 Open Challenges" position paper'
+    venue: AAAI
+    year: 2026
+    kind: position paper
+    claim: >-
+      Lists the field's consensus milestones: multimodality, reasoning, data,
+      evaluation, cross-robot action generalization, efficiency, whole-body
+      coordination, safety, agents, coordination with humans.
+    verify: Confirm exact title, authors, and the ten-item list wording.
+
+  vla-embodiment-2026:
+    label: VLA semantic-vs-embodied gap paper
+    year: 2026
+    kind: paper
+    claim: >-
+      VLA systems understand the instruction but fail to execute, inheriting
+      LLM/VLM priors with no physical-interaction experience.
+    verify: Confirm the specific paper and whether the framing is theirs or a survey's.
+
+  capability-robustness-bound-2026-05:
+    label: Capability/robustness trade-off (information-theoretic bound)
+    year: 2026
+    month: 05
+    kind: paper
+    claim: "An information-theoretic bound: you cannot get capability and robustness for free."
+    verify: Confirm the bound's exact statement and assumptions.
+
+  action-tokenization-limit-2026:
+    label: Discrete action tokenization limits VLA scaling
+    year: 2026
+    kind: paper
+    claim: Discrete action tokenization itself limits VLA scaling.
+    verify: Confirm the paper and its evidence (empirical vs theoretical).
+
+  skill-marketplace-survey-2026-08:
+    label: Robot-skill marketplace survey
+    year: 2026
+    month: 08
+    kind: survey
+    claim: >-
+      One-tap skills ship as static playback; open problems are adaptation,
+      cross-embodiment portability, provenance, safety verification, composition,
+      standardisation.
+    verify: Confirm the survey and its enumerated open problems.
+
+  wholebody-vla-survey-2026:
+    label: Whole-body + VLA survey
+    year: 2026
+    kind: survey
+    claim: Merging whole-body control with VLA policies is the most important open problem.
+    verify: Confirm the survey and the "most important" characterization.
+
+  robotics-eval-consensus-2026:
+    label: Robotics evaluation consensus (surveys/position papers)
+    year: 2026
+    kind: survey/consensus
+    claim: >-
+      No SWE-bench for robotics; need a small sharp benchmark plus a large
+      contamination-controlled real-world one; data at scale unresolved.
+    verify: Identify the specific surveys carrying this framing.
+
+  deformable-survey-2026:
+    label: Deformable-object manipulation survey
+    year: 2026
+    kind: survey
+    claim: Calls for a universal high-DoF dexterous hand with tactile sensors and comprehensive evaluation at scale.
+    verify: Confirm the survey.
+
+  world-model-survey-2026-05:
+    label: World-model survey
+    year: 2026
+    month: 05
+    kind: survey
+    claim: >-
+      Learned simulators used as RL environments and co-evolving with policies;
+      fidelity, long-horizon consistency, and sim-to-real trust remain open.
+    verify: Confirm the survey.
+
+  mujoco-playground-2026:
+    label: MuJoCo Playground writeup
+    year: 2026
+    kind: software writeup
+    claim: Humanoid control tasks highlight the sim-to-real gap; improved physics modeling needed.
+    verify: Confirm the writeup and the exact admission.
+
+  vla-safety-survey-2026:
+    label: VLA-safety survey
+    year: 2026
+    kind: survey
+    claim: >-
+      Catalogs adversarial and backdoor attacks and environmental jailbreaks;
+      no robust defenses or evaluation standards yet.
+    verify: Confirm the survey and its taxonomy.
+
+  ros2-nutshell-2026:
+    label: '"ROS 2 in a Nutshell"'
+    venue: ACM Computing Surveys
+    year: 2026
+    kind: survey
+    claim: >-
+      Added abstractions raise complexity; tooling/documentation/debugging gaps;
+      open-problem table over performance, real-time guarantees, scalability,
+      security, ecosystem maturity; middleware fragmentation from RMW designs.
+    verify: Confirm the article and its open-problem table.
+
+  se-ros-bugs-2025:
+    label: SE research on ROS bugs (ICSE/ISSTA/FSE track) + Frontiers 2025 editorial
+    year: 2025
+    kind: empirical studies + editorial
+    claim: >-
+      Misconfigurations, unit mismatches, dependency and interaction bugs common
+      with partial tooling; formal methods hard to apply (manual modeling).
+    verify: Identify the specific studies and the Frontiers editorial.
+
+  ros-runtime-verification-2025:
+    label: Runtime verification / field-based testing of ROS
+    year: 2025
+    kind: research area
+    claim: Active but immature; no standard CI / hardware-in-the-loop practice.
+    verify: Identify representative papers.

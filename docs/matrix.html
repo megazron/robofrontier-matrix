@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Robotics open-problems matrix</title>
+<style>
+:root{--ink:#1f2933;--mute:#6b7580;--line:#e1e6ea;--bg:#fff}
+body{font-family:'Segoe UI',Helvetica,Arial,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:2rem 1rem;line-height:1.5}
+main{max-width:1000px;margin:0 auto}
+h1{margin:0 0 .3rem} .sub{color:var(--mute);margin:0 0 1rem}
+.bar{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:.6rem 0 1.4rem}
+.seg.open{background:#b02a37}.seg.partial{background:#b25a00}.seg.solved{background:#2b8a3e}
+table{border-collapse:collapse;width:100%;font-size:14px}
+td{border-bottom:1px solid var(--line);padding:.55rem .6rem;vertical-align:top}
+tr.area td{background:#0b728510;font-weight:700;color:#0b7285;font-size:15px;
+border-bottom:2px solid #0b7285}
+.note{color:var(--mute);font-size:12.5px;margin-top:.25rem}
+@media(prefers-color-scheme:dark){:root{--ink:#e6eaee;--mute:#9aa4ae;--line:#2b3440;--bg:#0d1420}
+tr.area td{background:#0b728522}}
+</style></head><body><main>
+<h1>Robotics open-problems matrix</h1>
+<p class="sub">Window 2025-01 to 2026-09 · compiled 2026-09-16 · 15 open, 5 partial, 0 solved. Status is the field's, not this page's.</p>
+<div class="bar"><span class="seg partial" style="flex:5"></span><span class="seg open" style="flex:15"></span></div>
+<table><tr class="area"><td colspan="4">Learning-based control and VLAs</td></tr>
+<tr><td>The field&#x27;s consensus milestones remain collectively unmet: multimodality, reasoning, data, evaluation, cross-robot action generalization, efficiency, whole-body coordination, safety, agents, and coordination with humans.<div class="note">These are stated as the ten open challenges, i.e. milestones the field agrees are ahead, not a checklist any single system meets.</div></td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>&quot;10 Open Challenges&quot; position paper (2026)</td></tr>
+<tr><td>Semantic-vs-embodied gap: VLA systems often understand the instruction but fail to execute the task, because they inherit LLM/VLM priors with no physical-interaction experience.<div class="note">A robustness/grounding problem, not a language problem; more language pretraining does not close it.</div></td><td style="color:#b02a37;font-weight:600">open</td><td>reported</td><td>VLA semantic-vs-embodied gap paper (2026)</td></tr>
+<tr><td>Capability/robustness trade-off: an information-theoretic bound argues you cannot get both for free.<div class="note">If the bound holds, it reframes many &quot;make it more capable&quot; results as silently trading away robustness.</div></td><td style="color:#b02a37;font-weight:600">open</td><td>reported</td><td>Capability/robustness trade-off (information-theoretic bound) (2026)</td></tr>
+<tr><td>Discrete action tokenization itself limits VLA scaling.<div class="note">A design-choice critique; continuous / diffusion action heads are the contender but not a settled replacement.</div></td><td style="color:#b02a37;font-weight:600">open</td><td>reported</td><td>Discrete action tokenization limits VLA scaling (2026)</td></tr>
+<tr><td>Skill portability: commercial robot-skill marketplaces ship one-tap skills only as static playback. Open sub-problems are adaptation, cross-embodiment portability, provenance, safety verification, composition, and standardisation.<div class="note">Addressed directly by the sibling repo skill-package-spec, which ships a format for provenance + adaptation + safety manifest + composition.</div></td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>Robot-skill marketplace survey (2026)</td></tr>
+<tr><td>Merging whole-body control with VLA policies (the HOVER / ASAP / OmniH2O line). One survey calls this the most important open problem in the field.</td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>Whole-body + VLA survey (2026)</td></tr>
+<tr class="area"><td colspan="4">Evaluation and benchmarks</td></tr>
+<tr><td>There is no SWE-bench for robotics: every paper uses a slightly different task suite, camera setup, and embodiment. The stated need is a small sharp benchmark plus a large contamination-controlled real-world one.<div class="note">The infrastructure half (contamination control, embodiment tagging, reproducible scorecards) is addressed by the sibling repo robobench-harness; the community benchmark itself remains open.</div></td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>Robotics evaluation consensus (surveys/position papers) (2026)</td></tr>
+<tr><td>Deformable-object manipulation lacks a universal high-DoF dexterous hand with tactile sensors and comprehensive evaluation at scale.</td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>Deformable-object manipulation survey (2026)</td></tr>
+<tr class="area"><td colspan="4">World models and simulation</td></tr>
+<tr><td>Learned simulators are now used as RL environments and even co-evolve with policies, but fidelity, long-horizon consistency, and trustworthy use as sim-to-real bridges remain open.<div class="note">Usable today; the open part is knowing WHEN to trust a rollout. The sibling repo world-model-eval measures long-horizon drift and rollout trust.</div></td><td style="color:#b25a00;font-weight:600">partial</td><td>consensus</td><td>World-model survey (2026)</td></tr>
+<tr><td>Physics-sim limits: humanoid control tasks particularly highlight the simulation-to-reality gap, suggesting improved physics modeling is needed.<div class="note">Contact-rich and humanoid dynamics are where the gap is widest.</div></td><td style="color:#b25a00;font-weight:600">partial</td><td>reported</td><td>MuJoCo Playground writeup (2026)</td></tr>
+<tr class="area"><td colspan="4">Safety</td></tr>
+<tr><td>Adversarial and backdoor attacks and environmental jailbreaks (malicious text/objects in the scene that steer the robot) have no robust defenses or evaluation standards yet.<div class="note">The evaluation-standard half is addressed by the sibling repo vla-scene-redteam (threat taxonomy, defenses, attack-success-rate scoring); robust guaranteed defenses remain open.</div></td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>VLA-safety survey (2026)</td></tr>
+<tr class="area"><td colspan="4">Software infrastructure (ROS 2 and friends)</td></tr>
+<tr><td>Added abstractions increase complexity and steepen the learning curve, especially migrating from ROS 1; adoption is hindered by tooling immaturity, documentation gaps, and limited debugging support.</td><td style="color:#b25a00;font-weight:600">partial</td><td>consensus</td><td>&quot;ROS 2 in a Nutshell&quot; (2026)</td></tr>
+<tr><td>Open-problem table covers performance, real-time guarantees, scalability, security, and ecosystem maturity; few studies provide verified end-to-end guarantees under adversarial and multi-robot conditions.</td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>&quot;ROS 2 in a Nutshell&quot; (2026)</td></tr>
+<tr><td>Middleware fixes (hierarchical discovery, partition-based segmentation, RMW designs such as Zenoh) mitigate problems but increase ecosystem heterogeneity and interoperability complexity.</td><td style="color:#b25a00;font-weight:600">partial</td><td>consensus</td><td>&quot;ROS 2 in a Nutshell&quot; (2026)</td></tr>
+<tr><td>Misconfigurations, physical-unit mismatches, dependency bugs, and inter-component interaction bugs remain empirically common with only partial tooling; formal methods are hard to apply because building models and extracting parameters is manual.<div class="note">The cheap-to-detect classes are addressed by the sibling repo ros2-interaction-lint (static + live cross-check for units, QoS/type, config, deps, service/action contracts); formal end-to-end proof stays open.</div></td><td style="color:#b25a00;font-weight:600">partial</td><td>consensus</td><td>SE research on ROS bugs (ICSE/ISSTA/FSE track) + Frontiers 2025 editorial (2025)</td></tr>
+<tr><td>Runtime verification and field-based testing of ROS systems is active but immature: no standard CI / hardware-in-the-loop practice.</td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>Runtime verification / field-based testing of ROS (2025)</td></tr>
+<tr class="area"><td colspan="4">Cross-cutting</td></tr>
+<tr><td>Data acquisition at scale is unresolved and recurs across the 2026 surveys.</td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>Robotics evaluation consensus (surveys/position papers) (2026)</td></tr>
+<tr><td>Reward design remains unresolved and recurs across the 2026 surveys.</td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>&quot;10 Open Challenges&quot; position paper (2026)</td></tr>
+<tr><td>Energy and compute budgets on-board recur as an unresolved constraint.</td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>&quot;10 Open Challenges&quot; position paper (2026)</td></tr>
+<tr><td>Human-intent prediction recurs as unresolved across the 2026 surveys.</td><td style="color:#b02a37;font-weight:600">open</td><td>consensus</td><td>Whole-body + VLA survey (2026)</td></tr></table>
+</main></body></html>

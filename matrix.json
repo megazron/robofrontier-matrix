@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "compiled": "2026-09-16",
+  "window": "2025-01 to 2026-09",
+  "counts": {
+    "solved": 0,
+    "partial": 5,
+    "open": 15
+  },
+  "areas": [
+    {
+      "id": "vla",
+      "title": "Learning-based control and VLAs",
+      "items": [
+        {
+          "id": "vla-milestones",
+          "problem": "The field's consensus milestones remain collectively unmet: multimodality, reasoning, data, evaluation, cross-robot action generalization, efficiency, whole-body coordination, safety, agents, and coordination with humans.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "aaai2026-10-challenges",
+          "notes": "These are stated as the ten open challenges, i.e. milestones the field agrees are ahead, not a checklist any single system meets."
+        },
+        {
+          "id": "vla-semantic-embodied-gap",
+          "problem": "Semantic-vs-embodied gap: VLA systems often understand the instruction but fail to execute the task, because they inherit LLM/VLM priors with no physical-interaction experience.",
+          "status": "open",
+          "evidence_level": "reported",
+          "source": "vla-embodiment-2026",
+          "notes": "A robustness/grounding problem, not a language problem; more language pretraining does not close it."
+        },
+        {
+          "id": "vla-capability-robustness",
+          "problem": "Capability/robustness trade-off: an information-theoretic bound argues you cannot get both for free.",
+          "status": "open",
+          "evidence_level": "reported",
+          "source": "capability-robustness-bound-2026-05",
+          "notes": "If the bound holds, it reframes many \"make it more capable\" results as silently trading away robustness."
+        },
+        {
+          "id": "vla-action-tokenization",
+          "problem": "Discrete action tokenization itself limits VLA scaling.",
+          "status": "open",
+          "evidence_level": "reported",
+          "source": "action-tokenization-limit-2026",
+          "notes": "A design-choice critique; continuous / diffusion action heads are the contender but not a settled replacement."
+        },
+        {
+          "id": "vla-skill-portability",
+          "problem": "Skill portability: commercial robot-skill marketplaces ship one-tap skills only as static playback. Open sub-problems are adaptation, cross-embodiment portability, provenance, safety verification, composition, and standardisation.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "skill-marketplace-survey-2026-08",
+          "notes": "Addressed directly by the sibling repo skill-package-spec, which ships a format for provenance + adaptation + safety manifest + composition."
+        },
+        {
+          "id": "vla-wholebody",
+          "problem": "Merging whole-body control with VLA policies (the HOVER / ASAP / OmniH2O line). One survey calls this the most important open problem in the field.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "wholebody-vla-survey-2026",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "eval",
+      "title": "Evaluation and benchmarks",
+      "items": [
+        {
+          "id": "eval-no-swebench",
+          "problem": "There is no SWE-bench for robotics: every paper uses a slightly different task suite, camera setup, and embodiment. The stated need is a small sharp benchmark plus a large contamination-controlled real-world one.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "robotics-eval-consensus-2026",
+          "notes": "The infrastructure half (contamination control, embodiment tagging, reproducible scorecards) is addressed by the sibling repo robobench-harness; the community benchmark itself remains open."
+        },
+        {
+          "id": "eval-deformable",
+          "problem": "Deformable-object manipulation lacks a universal high-DoF dexterous hand with tactile sensors and comprehensive evaluation at scale.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "deformable-survey-2026",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "world-models",
+      "title": "World models and simulation",
+      "items": [
+        {
+          "id": "wm-as-rl-env",
+          "problem": "Learned simulators are now used as RL environments and even co-evolve with policies, but fidelity, long-horizon consistency, and trustworthy use as sim-to-real bridges remain open.",
+          "status": "partial",
+          "evidence_level": "consensus",
+          "source": "world-model-survey-2026-05",
+          "notes": "Usable today; the open part is knowing WHEN to trust a rollout. The sibling repo world-model-eval measures long-horizon drift and rollout trust."
+        },
+        {
+          "id": "wm-physics-gap",
+          "problem": "Physics-sim limits: humanoid control tasks particularly highlight the simulation-to-reality gap, suggesting improved physics modeling is needed.",
+          "status": "partial",
+          "evidence_level": "reported",
+          "source": "mujoco-playground-2026",
+          "notes": "Contact-rich and humanoid dynamics are where the gap is widest."
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "title": "Safety",
+      "items": [
+        {
+          "id": "safety-vla-attacks",
+          "problem": "Adversarial and backdoor attacks and environmental jailbreaks (malicious text/objects in the scene that steer the robot) have no robust defenses or evaluation standards yet.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "vla-safety-survey-2026",
+          "notes": "The evaluation-standard half is addressed by the sibling repo vla-scene-redteam (threat taxonomy, defenses, attack-success-rate scoring); robust guaranteed defenses remain open."
+        }
+      ]
+    },
+    {
+      "id": "ros2",
+      "title": "Software infrastructure (ROS 2 and friends)",
+      "items": [
+        {
+          "id": "ros2-complexity",
+          "problem": "Added abstractions increase complexity and steepen the learning curve, especially migrating from ROS 1; adoption is hindered by tooling immaturity, documentation gaps, and limited debugging support.",
+          "status": "partial",
+          "evidence_level": "consensus",
+          "source": "ros2-nutshell-2026",
+          "notes": ""
+        },
+        {
+          "id": "ros2-guarantees",
+          "problem": "Open-problem table covers performance, real-time guarantees, scalability, security, and ecosystem maturity; few studies provide verified end-to-end guarantees under adversarial and multi-robot conditions.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "ros2-nutshell-2026",
+          "notes": ""
+        },
+        {
+          "id": "ros2-middleware-fragmentation",
+          "problem": "Middleware fixes (hierarchical discovery, partition-based segmentation, RMW designs such as Zenoh) mitigate problems but increase ecosystem heterogeneity and interoperability complexity.",
+          "status": "partial",
+          "evidence_level": "consensus",
+          "source": "ros2-nutshell-2026",
+          "notes": ""
+        },
+        {
+          "id": "ros2-interaction-bugs",
+          "problem": "Misconfigurations, physical-unit mismatches, dependency bugs, and inter-component interaction bugs remain empirically common with only partial tooling; formal methods are hard to apply because building models and extracting parameters is manual.",
+          "status": "partial",
+          "evidence_level": "consensus",
+          "source": "se-ros-bugs-2025",
+          "notes": "The cheap-to-detect classes are addressed by the sibling repo ros2-interaction-lint (static + live cross-check for units, QoS/type, config, deps, service/action contracts); formal end-to-end proof stays open."
+        },
+        {
+          "id": "ros2-runtime-verification",
+          "problem": "Runtime verification and field-based testing of ROS systems is active but immature: no standard CI / hardware-in-the-loop practice.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "ros-runtime-verification-2025",
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "id": "cross-cutting",
+      "title": "Cross-cutting",
+      "items": [
+        {
+          "id": "cc-data-scale",
+          "problem": "Data acquisition at scale is unresolved and recurs across the 2026 surveys.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "robotics-eval-consensus-2026",
+          "notes": ""
+        },
+        {
+          "id": "cc-reward-design",
+          "problem": "Reward design remains unresolved and recurs across the 2026 surveys.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "aaai2026-10-challenges",
+          "notes": ""
+        },
+        {
+          "id": "cc-onboard-compute",
+          "problem": "Energy and compute budgets on-board recur as an unresolved constraint.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "aaai2026-10-challenges",
+          "notes": ""
+        },
+        {
+          "id": "cc-human-intent",
+          "problem": "Human-intent prediction recurs as unresolved across the 2026 surveys.",
+          "status": "open",
+          "evidence_level": "consensus",
+          "source": "wholebody-vla-survey-2026",
+          "notes": ""
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "aaai2026-10-challenges": {
+      "id": "aaai2026-10-challenges",
+      "label": "\"10 Open Challenges\" position paper",
+      "year": 2026,
+      "month": null,
+      "venue": "AAAI",
+      "kind": "position paper",
+      "claim": "Lists the field's consensus milestones: multimodality, reasoning, data, evaluation, cross-robot action generalization, efficiency, whole-body coordination, safety, agents, coordination with humans.",
+      "verify": "Confirm exact title, authors, and the ten-item list wording.",
+      "url": ""
+    },
+    "vla-embodiment-2026": {
+      "id": "vla-embodiment-2026",
+      "label": "VLA semantic-vs-embodied gap paper",
+      "year": 2026,
+      "month": null,
+      "venue": "",
+      "kind": "paper",
+      "claim": "VLA systems understand the instruction but fail to execute, inheriting LLM/VLM priors with no physical-interaction experience.",
+      "verify": "Confirm the specific paper and whether the framing is theirs or a survey's.",
+      "url": ""
+    },
+    "capability-robustness-bound-2026-05": {
+      "id": "capability-robustness-bound-2026-05",
+      "label": "Capability/robustness trade-off (information-theoretic bound)",
+      "year": 2026,
+      "month": 5,
+      "venue": "",
+      "kind": "paper",
+      "claim": "An information-theoretic bound: you cannot get capability and robustness for free.",
+      "verify": "Confirm the bound's exact statement and assumptions.",
+      "url": ""
+    },
+    "action-tokenization-limit-2026": {
+      "id": "action-tokenization-limit-2026",
+      "label": "Discrete action tokenization limits VLA scaling",
+      "year": 2026,
+      "month": null,
+      "venue": "",
+      "kind": "paper",
+      "claim": "Discrete action tokenization itself limits VLA scaling.",
+      "verify": "Confirm the paper and its evidence (empirical vs theoretical).",
+      "url": ""
+    },
+    "skill-marketplace-survey-2026-08": {
+      "id": "skill-marketplace-survey-2026-08",
+      "label": "Robot-skill marketplace survey",
+      "year": 2026,
+      "month": "08",
+      "venue": "",
+      "kind": "survey",
+      "claim": "One-tap skills ship as static playback; open problems are adaptation, cross-embodiment portability, provenance, safety verification, composition, standardisation.",
+      "verify": "Confirm the survey and its enumerated open problems.",
+      "url": ""
+    },
+    "wholebody-vla-survey-2026": {
+      "id": "wholebody-vla-survey-2026",
+      "label": "Whole-body + VLA survey",
+      "year": 2026,
+      "month": null,
+      "venue": "",
+      "kind": "survey",
+      "claim": "Merging whole-body control with VLA policies is the most important open problem.",
+      "verify": "Confirm the survey and the \"most important\" characterization.",
+      "url": ""
+    },
+    "robotics-eval-consensus-2026": {
+      "id": "robotics-eval-consensus-2026",
+      "label": "Robotics evaluation consensus (surveys/position papers)",
+      "year": 2026,
+      "month": null,
+      "venue": "",
+      "kind": "survey/consensus",
+      "claim": "No SWE-bench for robotics; need a small sharp benchmark plus a large contamination-controlled real-world one; data at scale unresolved.",
+      "verify": "Identify the specific surveys carrying this framing.",
+      "url": ""
+    },
+    "deformable-survey-2026": {
+      "id": "deformable-survey-2026",
+      "label": "Deformable-object manipulation survey",
+      "year": 2026,
+      "month": null,
+      "venue": "",
+      "kind": "survey",
+      "claim": "Calls for a universal high-DoF dexterous hand with tactile sensors and comprehensive evaluation at scale.",
+      "verify": "Confirm the survey.",
+      "url": ""
+    },
+    "world-model-survey-2026-05": {
+      "id": "world-model-survey-2026-05",
+      "label": "World-model survey",
+      "year": 2026,
+      "month": 5,
+      "venue": "",
+      "kind": "survey",
+      "claim": "Learned simulators used as RL environments and co-evolving with policies; fidelity, long-horizon consistency, and sim-to-real trust remain open.",
+      "verify": "Confirm the survey.",
+      "url": ""
+    },
+    "mujoco-playground-2026": {
+      "id": "mujoco-playground-2026",
+      "label": "MuJoCo Playground writeup",
+      "year": 2026,
+      "month": null,
+      "venue": "",
+      "kind": "software writeup",
+      "claim": "Humanoid control tasks highlight the sim-to-real gap; improved physics modeling needed.",
+      "verify": "Confirm the writeup and the exact admission.",
+      "url": ""
+    },
+    "vla-safety-survey-2026": {
+      "id": "vla-safety-survey-2026",
+      "label": "VLA-safety survey",
+      "year": 2026,
+      "month": null,
+      "venue": "",
+      "kind": "survey",
+      "claim": "Catalogs adversarial and backdoor attacks and environmental jailbreaks; no robust defenses or evaluation standards yet.",
+      "verify": "Confirm the survey and its taxonomy.",
+      "url": ""
+    },
+    "ros2-nutshell-2026": {
+      "id": "ros2-nutshell-2026",
+      "label": "\"ROS 2 in a Nutshell\"",
+      "year": 2026,
+      "month": null,
+      "venue": "ACM Computing Surveys",
+      "kind": "survey",
+      "claim": "Added abstractions raise complexity; tooling/documentation/debugging gaps; open-problem table over performance, real-time guarantees, scalability, security, ecosystem maturity; middleware fragmentation from RMW designs.",
+      "verify": "Confirm the article and its open-problem table.",
+      "url": ""
+    },
+    "se-ros-bugs-2025": {
+      "id": "se-ros-bugs-2025",
+      "label": "SE research on ROS bugs (ICSE/ISSTA/FSE track) + Frontiers 2025 editorial",
+      "year": 2025,
+      "month": null,
+      "venue": "",
+      "kind": "empirical studies + editorial",
+      "claim": "Misconfigurations, unit mismatches, dependency and interaction bugs common with partial tooling; formal methods hard to apply (manual modeling).",
+      "verify": "Identify the specific studies and the Frontiers editorial.",
+      "url": ""
+    },
+    "ros-runtime-verification-2025": {
+      "id": "ros-runtime-verification-2025",
+      "label": "Runtime verification / field-based testing of ROS",
+      "year": 2025,
+      "month": null,
+      "venue": "",
+      "kind": "research area",
+      "claim": "Active but immature; no standard CI / hardware-in-the-loop practice.",
+      "verify": "Identify representative papers.",
+      "url": ""
+    }
+  }
+}

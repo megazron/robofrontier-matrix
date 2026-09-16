@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="462" viewBox="0 0 940 462" font-family="Segoe UI,Helvetica,Arial,sans-serif">
+<defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#6b7580"/></marker></defs>
+<rect width="940" height="462" fill="#ffffff"/>
+<text x="30" y="42" font-size="22" font-weight="700" fill="#1f2933">What this project set out to move</text>
+<text x="30" y="66" font-size="13" fill="#6b7580">Each area of the matrix, and the sibling repo that ships a runnable slice of it. The frontier itself stays open.</text>
+<rect x="30" y="92" width="360" height="50" rx="8" fill="#0b728510" stroke="#0b7285" stroke-width="1.5"/>
+<text x="46" y="119" font-size="15" font-weight="600" fill="#1f2933">Learning-based control and VLAs</text>
+<line x1="390" y1="111" x2="470" y2="111" stroke="#6b7580" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="470" y="92" width="440" height="50" rx="8" fill="#e8f5ec" stroke="#2b8a3e" stroke-width="1.5"/>
+<text x="486" y="114" font-size="14" font-weight="700" fill="#2b8a3e" font-family="monospace">skill-package-spec</text>
+<text x="486" y="132" font-size="12" fill="#6b7580">skill portability slice</text>
+<rect x="30" y="154" width="360" height="50" rx="8" fill="#0b728510" stroke="#0b7285" stroke-width="1.5"/>
+<text x="46" y="181" font-size="15" font-weight="600" fill="#1f2933">Evaluation and benchmarks</text>
+<line x1="390" y1="173" x2="470" y2="173" stroke="#6b7580" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="470" y="154" width="440" height="50" rx="8" fill="#e8f5ec" stroke="#2b8a3e" stroke-width="1.5"/>
+<text x="486" y="176" font-size="14" font-weight="700" fill="#2b8a3e" font-family="monospace">robobench-harness</text>
+<text x="486" y="194" font-size="12" fill="#6b7580">the evaluation infrastructure</text>
+<rect x="30" y="216" width="360" height="50" rx="8" fill="#0b728510" stroke="#0b7285" stroke-width="1.5"/>
+<text x="46" y="243" font-size="15" font-weight="600" fill="#1f2933">World models and simulation</text>
+<line x1="390" y1="235" x2="470" y2="235" stroke="#6b7580" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="470" y="216" width="440" height="50" rx="8" fill="#e8f5ec" stroke="#2b8a3e" stroke-width="1.5"/>
+<text x="486" y="238" font-size="14" font-weight="700" fill="#2b8a3e" font-family="monospace">world-model-eval</text>
+<text x="486" y="256" font-size="12" fill="#6b7580">long-horizon / trust metrics</text>
+<rect x="30" y="278" width="360" height="50" rx="8" fill="#0b728510" stroke="#0b7285" stroke-width="1.5"/>
+<text x="46" y="305" font-size="15" font-weight="600" fill="#1f2933">Safety</text>
+<line x1="390" y1="297" x2="470" y2="297" stroke="#6b7580" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="470" y="278" width="440" height="50" rx="8" fill="#e8f5ec" stroke="#2b8a3e" stroke-width="1.5"/>
+<text x="486" y="300" font-size="14" font-weight="700" fill="#2b8a3e" font-family="monospace">vla-scene-redteam</text>
+<text x="486" y="318" font-size="12" fill="#6b7580">threat taxonomy + defenses</text>
+<rect x="30" y="340" width="360" height="50" rx="8" fill="#0b728510" stroke="#0b7285" stroke-width="1.5"/>
+<text x="46" y="367" font-size="15" font-weight="600" fill="#1f2933">Software infrastructure (ROS 2 and friends)</text>
+<line x1="390" y1="359" x2="470" y2="359" stroke="#6b7580" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="470" y="340" width="440" height="50" rx="8" fill="#e8f5ec" stroke="#2b8a3e" stroke-width="1.5"/>
+<text x="486" y="362" font-size="14" font-weight="700" fill="#2b8a3e" font-family="monospace">ros2-interaction-lint</text>
+<text x="486" y="380" font-size="12" fill="#6b7580">the cheap-to-detect bug classes</text>
+<rect x="30" y="402" width="360" height="50" rx="8" fill="#0b728510" stroke="#0b7285" stroke-width="1.5"/>
+<text x="46" y="429" font-size="15" font-weight="600" fill="#1f2933">Cross-cutting</text>
+<text x="486" y="429" font-size="13" fill="#9aa4ae" font-style="italic">recurs across areas; no single-repo slice</text>
+</svg>
