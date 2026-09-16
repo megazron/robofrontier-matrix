@@ -1,4 +1,4 @@
-# robotics-open-problems-matrix
+# RoboFrontier
 
 **A sourced, machine-checkable matrix of what is solved, partially solved, and open in embodied AI and robotics software, 2025 to September 2026.**
 
@@ -26,16 +26,16 @@ This repo is the index for a set of sibling repositories, each of which ships a 
 
 | Area | Runnable slice shipped | Repo |
 |---|---|---|
-| Evaluation, "no SWE-bench for robotics" | contamination-controlled, embodiment-tagged eval harness | [robobench-harness](https://github.com/megazron/robobench-harness) |
-| Safety, environmental jailbreaks | threat taxonomy, defenses, attack-success-rate scoring | [vla-scene-redteam](https://github.com/megazron/vla-scene-redteam) |
-| ROS 2 interaction bugs | static + live checks for units, QoS/type, config, deps | [ros2-interaction-lint](https://github.com/megazron/ros2-interaction-lint) |
-| Skill portability | portable skill format with provenance and safety manifest | [skill-package-spec](https://github.com/megazron/skill-package-spec) |
-| World models as sim-to-real bridges | long-horizon consistency and rollout-trust metrics | [world-model-eval](https://github.com/megazron/world-model-eval) |
+| Evaluation, "no SWE-bench for robotics" | contamination-controlled, embodiment-tagged eval harness | [cleanbench-eval](https://github.com/megazron/cleanbench-eval) |
+| Safety, environmental jailbreaks | threat taxonomy, defenses, attack-success-rate scoring | [scenebreaker-vla](https://github.com/megazron/scenebreaker-vla) |
+| ROS 2 interaction bugs | static + live checks for units, QoS/type, config, deps | [crosswire-lint](https://github.com/megazron/crosswire-lint) |
+| Skill portability | portable skill format with provenance and safety manifest | [skillcrate-spec](https://github.com/megazron/skillcrate-spec) |
+| World models as sim-to-real bridges | long-horizon consistency and rollout-trust metrics | [trusthorizon-worldmodel](https://github.com/megazron/trusthorizon-worldmodel) |
 
 ## Install
 
 ```
-pip install git+https://github.com/megazron/robotics-open-problems-matrix
+pip install git+https://github.com/megazron/robofrontier-matrix
 ```
 
 Or clone and run from source with `PYTHONPATH=src`.

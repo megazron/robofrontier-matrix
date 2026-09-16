@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "robotics-open-problems-matrix"
+name = "robofrontier-matrix"
 version = "0.1.0"
 description = "A sourced, machine-checkable matrix of open problems in embodied AI and robotics software, 2025 to Sept 2026."
 readme = "README.md"

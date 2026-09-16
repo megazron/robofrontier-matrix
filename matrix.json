@@ -50,7 +50,7 @@
           "status": "open",
           "evidence_level": "consensus",
           "source": "skill-marketplace-survey-2026-08",
-          "notes": "Addressed directly by the sibling repo skill-package-spec, which ships a format for provenance + adaptation + safety manifest + composition."
+          "notes": "Addressed directly by the sibling repo skillcrate-spec, which ships a format for provenance + adaptation + safety manifest + composition."
         },
         {
           "id": "vla-wholebody",
@@ -72,7 +72,7 @@
           "status": "open",
           "evidence_level": "consensus",
           "source": "robotics-eval-consensus-2026",
-          "notes": "The infrastructure half (contamination control, embodiment tagging, reproducible scorecards) is addressed by the sibling repo robobench-harness; the community benchmark itself remains open."
+          "notes": "The infrastructure half (contamination control, embodiment tagging, reproducible scorecards) is addressed by the sibling repo cleanbench-eval; the community benchmark itself remains open."
         },
         {
           "id": "eval-deformable",
@@ -94,7 +94,7 @@
           "status": "partial",
           "evidence_level": "consensus",
           "source": "world-model-survey-2026-05",
-          "notes": "Usable today; the open part is knowing WHEN to trust a rollout. The sibling repo world-model-eval measures long-horizon drift and rollout trust."
+          "notes": "Usable today; the open part is knowing WHEN to trust a rollout. The sibling repo trusthorizon-worldmodel measures long-horizon drift and rollout trust."
         },
         {
           "id": "wm-physics-gap",
@@ -116,7 +116,7 @@
           "status": "open",
           "evidence_level": "consensus",
           "source": "vla-safety-survey-2026",
-          "notes": "The evaluation-standard half is addressed by the sibling repo vla-scene-redteam (threat taxonomy, defenses, attack-success-rate scoring); robust guaranteed defenses remain open."
+          "notes": "The evaluation-standard half is addressed by the sibling repo scenebreaker-vla (threat taxonomy, defenses, attack-success-rate scoring); robust guaranteed defenses remain open."
         }
       ]
     },
@@ -154,7 +154,7 @@
           "status": "partial",
           "evidence_level": "consensus",
           "source": "se-ros-bugs-2025",
-          "notes": "The cheap-to-detect classes are addressed by the sibling repo ros2-interaction-lint (static + live cross-check for units, QoS/type, config, deps, service/action contracts); formal end-to-end proof stays open."
+          "notes": "The cheap-to-detect classes are addressed by the sibling repo crosswire-lint (static + live cross-check for units, QoS/type, config, deps, service/action contracts); formal end-to-end proof stays open."
         },
         {
           "id": "ros2-runtime-verification",

@@ -59,11 +59,11 @@ def coverage_map():
     """An SVG map of which sibling repo addresses which area."""
     m = opmatrix.load()
     addressed = {
-        "vla": ("skill-package-spec", "skill portability slice"),
-        "eval": ("robobench-harness", "the evaluation infrastructure"),
-        "world-models": ("world-model-eval", "long-horizon / trust metrics"),
-        "safety": ("vla-scene-redteam", "threat taxonomy + defenses"),
-        "ros2": ("ros2-interaction-lint", "the cheap-to-detect bug classes"),
+        "vla": ("skillcrate-spec", "skill portability slice"),
+        "eval": ("cleanbench-eval", "the evaluation infrastructure"),
+        "world-models": ("trusthorizon-worldmodel", "long-horizon / trust metrics"),
+        "safety": ("scenebreaker-vla", "threat taxonomy + defenses"),
+        "ros2": ("crosswire-lint", "the cheap-to-detect bug classes"),
         "cross-cutting": ("", ""),
     }
     W, rowh = 940, 62

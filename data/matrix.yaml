@@ -75,7 +75,7 @@ areas:
         evidence_level: consensus
         source: skill-marketplace-survey-2026-08
         notes: >-
-          Addressed directly by the sibling repo skill-package-spec, which ships a
+          Addressed directly by the sibling repo skillcrate-spec, which ships a
           format for provenance + adaptation + safety manifest + composition.
       - id: vla-wholebody
         problem: >-
@@ -98,7 +98,7 @@ areas:
         source: robotics-eval-consensus-2026
         notes: >-
           The infrastructure half (contamination control, embodiment tagging,
-          reproducible scorecards) is addressed by the sibling repo robobench-harness;
+          reproducible scorecards) is addressed by the sibling repo cleanbench-eval;
           the community benchmark itself remains open.
       - id: eval-deformable
         problem: >-
@@ -121,7 +121,7 @@ areas:
         source: world-model-survey-2026-05
         notes: >-
           Usable today; the open part is knowing WHEN to trust a rollout. The sibling
-          repo world-model-eval measures long-horizon drift and rollout trust.
+          repo trusthorizon-worldmodel measures long-horizon drift and rollout trust.
       - id: wm-physics-gap
         problem: >-
           Physics-sim limits: humanoid control tasks particularly highlight the
@@ -145,7 +145,7 @@ areas:
         source: vla-safety-survey-2026
         notes: >-
           The evaluation-standard half is addressed by the sibling repo
-          vla-scene-redteam (threat taxonomy, defenses, attack-success-rate scoring);
+          scenebreaker-vla (threat taxonomy, defenses, attack-success-rate scoring);
           robust guaranteed defenses remain open.
 
   - id: ros2
@@ -186,7 +186,7 @@ areas:
         source: se-ros-bugs-2025
         notes: >-
           The cheap-to-detect classes are addressed by the sibling repo
-          ros2-interaction-lint (static + live cross-check for units, QoS/type,
+          crosswire-lint (static + live cross-check for units, QoS/type,
           config, deps, service/action contracts); formal end-to-end proof stays open.
       - id: ros2-runtime-verification
         problem: >-
