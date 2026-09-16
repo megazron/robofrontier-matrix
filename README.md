@@ -1,5 +1,10 @@
 # RoboFrontier
 
+![demo](docs/img/demo.gif)
+
+*Live CLI demo: the matrix validator and stats.*
+
+
 **A sourced, machine-checkable matrix of what is solved, partially solved, and open in embodied AI and robotics software, 2025 to September 2026.**
 
 The 2025-2026 surveys and position papers keep restating the same open problems in prose. This repo turns that prose into structured, validated data: one row per problem, each with a status, an evidence level, a source, and a note. It renders to Markdown, JSON and a self-contained HTML page, and a CI check fails if a row cites a source that does not exist or claims a status it should not.
