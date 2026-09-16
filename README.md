@@ -2,7 +2,7 @@
 
 ![demo](docs/img/demo.gif)
 
-*Live CLI demo: the matrix validator and stats.*
+*Four commands of the CLI.*
 
 **A sourced, machine-checkable matrix of what is solved, partially solved, and open in embodied AI and robotics software, 2025 to September 2026.**
 
